@@ -488,10 +488,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1298533400996511955, guid: 82ae04b7fe42be648a87cd46c85e6b56, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4975669362839661147, guid: 82ae04b7fe42be648a87cd46c85e6b56, type: 3}
       propertyPath: m_Name
       value: Rocket
