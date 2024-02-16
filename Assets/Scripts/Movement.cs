@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +5,9 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     Rigidbody rb;
+
+    [SerializeField]
+    float mainThrust = 1000f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,7 @@ public class Movement : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Space))
         {
-            rb.AddRelativeForce(Vector3.up);
+            rb.AddRelativeForce(mainThrust * Time.deltaTime * Vector3.up);
         }
     }
 
