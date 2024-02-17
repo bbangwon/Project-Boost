@@ -42,10 +42,13 @@ public class Movement : MonoBehaviour
         {
             ApplyRotation(-rotationThrust);
         }
+        //rb.angularVelocity = Vector3.zero; // remove rotation due to physics system
     }
 
     private void ApplyRotation(float rotationThisFrame)
     {
-        transform.Rotate(rotationThisFrame * Time.deltaTime * Vector3.forward);
+        rb.freezeRotation = true; // freezing rotation so we can manually rotate
+        transform.Rotate(rotationThisFrame * Time.deltaTime * Vector3.forward);        
+        rb.freezeRotation = false; // unfreezing rotation so the physics system can take over
     }
 }
